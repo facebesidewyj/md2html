@@ -1,0 +1,27 @@
+{
+  "name": "md2html",
+  "version": "1.0.0",
+  "description": "A tool that can convert markdown to html",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facebesidewyj/md2html.git"
+  },
+  "keywords": [
+    "markdown",
+    "md2html"
+  ],
+  "author": "yijinw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/facebesidewyj/md2html/issues"
+  },
+  "homepage": "https://github.com/facebesidewyj/md2html#readme",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "hyperdown": "^2.3.1"
+  }
+}

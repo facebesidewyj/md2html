@@ -1,0 +1,17 @@
+const fs = require('fs')
+const HyperDown = require('hyperdown')
+const cheerio = require('cheerio')
+
+let parser = new HyperDown()
+let data = fs.readFileSync('./help.md', 'utf-8')
+let html = parser.makeHtml(data)
+console.log('----解析md成功----')
+html = `<div class="content-wrapper">${html}</div>`
+let $ = cheerio.load(html, { decodeEntities: false })
+console.log('----解析DOM成功----')
+$('h1').addClass('title')
+$('h2').addClass('sub-title')
+$('p').addClass('content')
+html = $.html()
+fs.writeFileSync('./help.html', html, 'utf8')
+console.log('----生成html文件----')
